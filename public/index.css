@@ -1,0 +1,52 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* add padding to the body to push down the header element*/
+body {
+  padding-top: 5px;
+}
+
+/* Header is aligning the logo and the nav links use border to see the boxes for adj*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border: solid black 2px;
+  width: 90%;
+}
+
+.align-header {
+  display: flex;
+  justify-content: center;
+}
+/* Updating the logo us flex and positioning  */
+#logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 10%;
+  font-size: 1.5rem;
+}
+
+/* Header Nav is positioning the nav bar within the header element use border to see Box adj*/
+header nav {
+  width: 50%;
+  position: relative;
+  right: 6%;
+}
+
+/*ul is the unorder list in the nav bar and is updating the list position using flex */
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 0.9rem;
+}
