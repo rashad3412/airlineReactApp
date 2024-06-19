@@ -10,6 +10,7 @@ html {
 /* add padding to the body to push down the header element*/
 body {
   padding-top: 5px;
+  background-color: rgb(254, 247, 239);
 }
 
 /* Header is aligning the logo and the nav links use border to see the boxes for adj*/
@@ -18,8 +19,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
-  border: solid black 2px;
+  border: solid #ffdead 2px;
   width: 90%;
+  height: 35px;
+  background-color: #0077c0;
+  color: #ffdead;
 }
 
 .align-header {
@@ -31,10 +35,15 @@ header {
   display: flex;
   align-items: center;
   position: relative;
-  left: 10%;
-  font-size: 1.5rem;
-}
 
+  left: 10%;
+  bottom: 5px;
+  font-size: 1.2rem;
+}
+#logo2 {
+  position: relative;
+  right: 5px;
+}
 /* Header Nav is positioning the nav bar within the header element use border to see Box adj*/
 header nav {
   width: 50%;
@@ -43,10 +52,71 @@ header nav {
 }
 
 /*ul is the unorder list in the nav bar and is updating the list position using flex */
-ul {
+.desc {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   font-size: 0.9rem;
+  position: relative;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.desc :hover {
+  color: white;
+  background: transparent;
+}
+
+/* Moving to who we are section of Page */
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+  color: #ffdead;
+  font-size: 20px;
+  position: relative;
+  right: 150px;
+  top: 150px;
+}
+
+.align-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 22px;
+  z-index: -1;
+}
+
+.airImg {
+  width: 90%;
+  height: 75vh;
+  border: #ffdead solid 3px;
+  object-fit: cover;
+}
+
+/* Items displays */
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card Container and alignment adjustments */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5%;
+}
+
+.card-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black 1px solid;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
 }
