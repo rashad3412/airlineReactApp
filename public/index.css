@@ -9,7 +9,6 @@ html {
 
 /* add padding to the body to push down the header element*/
 body {
-  padding-top: 5px;
   background-color: rgb(254, 247, 239);
 }
 
@@ -20,7 +19,7 @@ header {
   align-items: center;
   padding-top: 15px;
   border: solid #ffdead 2px;
-  width: 90%;
+  width: 100%;
   height: 35px;
   background-color: #0077c0;
   color: #ffdead;
@@ -29,6 +28,9 @@ header {
 .align-header {
   display: flex;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 /* Updating the logo us flex and positioning  */
 #logo {
@@ -105,18 +107,124 @@ header nav {
 
 /* Card Container and alignment adjustments */
 
+.align-cards {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
+  border: solid #0077c0 1px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  background-color: #ffdead;
   gap: 2.5%;
 }
 
-.card-display {
+.cardImg {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: black 1px solid;
+  border: #0077c0 1px solid;
   width: 350px;
   height: 350px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 705px) {
+  header nav {
+    width: 100%;
+  }
+  #logo {
+    opacity: 0;
+  }
+  .slogan {
+    position: relative;
+    right: 120px;
+  }
+  .airImg {
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 425px) {
+    .slogan {
+      position: relative;
+      right: 75px;
+    }
+    @media screen and (max-width: 320px) {
+      .slogan {
+        position: relative;
+        right: 50px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .cardImg {
+    width: 225px;
+    height: 225px;
+  }
+
+  .airImg {
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 955px) {
+  .cardImg {
+    width: 175px;
+    height: 175px;
+  }
+
+  .airImg {
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardImg {
+    width: 165px;
+    height: 165px;
+  }
+
+  @media screen and (max-width: 554px) {
+    .cardImg {
+      width: 125px;
+      height: 125px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .cardImg {
+      width: 105px;
+      height: 105px;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .cardImg {
+      width: 95px;
+      height: 95px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .cardImg {
+      width: 85px;
+      height: 85px;
+    }
+  }
+
+  .airImg {
+    object-fit: cover;
+  }
 }

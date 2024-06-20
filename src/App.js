@@ -88,10 +88,23 @@ function SloganAndImage() {
 
 function WhoAreWe() {
   return (
-    <div className="card-container">
-      <div className="card-display">Story</div>
-      <div className="card-display">Community</div>
-      <div className="card-display">Industry</div>
+    <div className="align-cards">
+      <div className="card-container">
+        <div id="carPic" className="card-display">
+          <img className="cardImg" src="carImg.jpg" alt="carPic" />
+        </div>
+        <div id="bikePic" className="card-display">
+          <img className="cardImg" src="bikeImg.jpg" alt="bikePic" />
+        </div>
+        <div className="card-display">
+          <img
+            id="roadPic"
+            className="cardImg"
+            src="roadImg.jpg"
+            alt="roadPic"
+          />
+        </div>
+      </div>
     </div>
   );
 }
