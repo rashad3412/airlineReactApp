@@ -88,7 +88,6 @@ header nav {
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 22px;
   z-index: -1;
 }
 
@@ -110,7 +109,6 @@ header nav {
 .align-cards {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
 }
 
 .card-container {
@@ -119,7 +117,7 @@ header nav {
   border: solid #0077c0 1px;
   border-radius: 10px;
   padding: 10px;
-  width: 80%;
+  width: 90%;
   background-color: #ffdead;
   gap: 2.5%;
 }
@@ -135,6 +133,85 @@ header nav {
   object-fit: cover;
 }
 
+/* Plan Travel Grid Container */
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  width: 80%;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  grid-template-columns: 0.5fr 3fr 4fr;
+  grid-template-rows: 8em 10em;
+  gap: 10px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container div:nth-child(2) {
+  background-color: pink;
+}
+.grid-container div:nth-child(3) {
+  background-color: teal;
+}
+.grid-container div:nth-child(4) {
+  background-color: yellow;
+}
+.grid-container div:nth-child(5) {
+  background-color: purple;
+}
+.grid-container div:nth-child(6) {
+  background-color: orange;
+}
+
+.plannerImg {
+  display: block;
+  position: relative;
+  left: 50px;
+  width: 300px;
+  height: 130px;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;
+  border: solid black 2px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  border: solid #ffdead 2px;
+  background-color: #0077c0;
+  color: #ffdead;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+span {
+  position: relative;
+  bottom: 5px;
+}
+
+#planning {
+  position: relative;
+  right: 75px;
+  margin: 0;
+  padding: 0;
+  top: 15px;
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+}
+
+/* media query for header and header nav */
 @media screen and (max-width: 800px) {
   header {
     display: flex;
@@ -142,6 +219,7 @@ header nav {
     justify-content: space-between;
   }
 }
+/* media query for logo and slogan and nav at 705px*/
 
 @media screen and (max-width: 705px) {
   header nav {
@@ -158,21 +236,32 @@ header nav {
     object-fit: cover;
   }
 
-  @media screen and (max-width: 425px) {
+  /* media query for slogan and nav list at 429px */
+  @media screen and (max-width: 429px) {
     .slogan {
       position: relative;
       right: 75px;
+      font-size: 18px;
     }
+
+    .desc {
+      margin-bottom: 5px;
+    }
+
     @media screen and (max-width: 320px) {
       .slogan {
         position: relative;
         right: 50px;
         font-size: 15px;
       }
+      .desc {
+        margin: -20px;
+      }
     }
   }
 }
 
+/* media querys for img on the screen at */
 @media screen and (max-width: 1370px) {
   .cardImg {
     width: 225px;

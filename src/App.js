@@ -18,6 +18,7 @@ export default function App() {
       <SloganAndImage />
       {/* <AirPortInfo /> */}
       <WhoAreWe />
+      <PlanTravel />
     </div>
   );
 }
@@ -88,21 +89,51 @@ function SloganAndImage() {
 
 function WhoAreWe() {
   return (
-    <div className="align-cards">
-      <div className="card-container">
-        <div id="carPic" className="card-display">
-          <img className="cardImg" src="carImg.jpg" alt="carPic" />
+    <div>
+      <div>
+        <h3>
+          <span>Who Are We</span>
+        </h3>
+      </div>
+      <div className="align-cards">
+        <div className="card-container">
+          <div id="carPic" className="card-display">
+            <img className="cardImg" src="carImg.jpg" alt="carPic" />
+          </div>
+          <div id="bikePic" className="card-display">
+            <img className="cardImg" src="bikeImg.jpg" alt="bikePic" />
+          </div>
+          <div className="card-display">
+            <img
+              id="roadPic"
+              className="cardImg"
+              src="roadImg.jpg"
+              alt="roadPic"
+            />
+          </div>
         </div>
-        <div id="bikePic" className="card-display">
-          <img className="cardImg" src="bikeImg.jpg" alt="bikePic" />
-        </div>
-        <div className="card-display">
-          <img
-            id="roadPic"
-            className="cardImg"
-            src="roadImg.jpg"
-            alt="roadPic"
-          />
+      </div>
+    </div>
+  );
+}
+
+function PlanTravel() {
+  return (
+    <div>
+      <h3>
+        <span>Plan Travel</span>
+      </h3>
+      <div className="center-container">
+        <div className="grid-container">
+          <div>
+            <img className="plannerImg" src="plannerImg.jpg" alt="plannerPic" />
+            <span id="planning">Planning</span>
+          </div>
+          <div>Schedule</div>
+          <div>People</div>
+          <div>Where</div>
+          <div>Luggage</div>
+          <div>Hotels</div>
         </div>
       </div>
     </div>
