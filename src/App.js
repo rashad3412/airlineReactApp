@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const objAir = [
   {
     location: "Norfolk International",
@@ -12,23 +14,28 @@ const objAir = [
 ];
 
 export default function App() {
+  const [airportInfo, setAirportInfo] = useState(objAir);
+  // console.log(airportInfo);
   return (
     <div>
       <NavBar />
       <SloganAndImage />
-      {/* <AirPortInfo /> */}
-      <WhoAreWe />
-      <PlanTravel />
+      <AirPortInfo />
+      <WhoAreWe whoarewe={airportInfo} />
+      <PlanTravel plan={airportInfo} />
     </div>
   );
 }
 
 function AirPortInfo() {
   // Mapping over objAir to render on the page and taking items from ObjAir and destructing in ObjAirItem
+
+  const Obj2 = objAir;
+
   return (
     <div>
       <ul>
-        {objAir.map((item) => (
+        {Obj2.map((item) => (
           <ObjAirItem item={item} key={item.airportCode} />
         ))}
       </ul>
@@ -87,7 +94,7 @@ function SloganAndImage() {
   );
 }
 
-function WhoAreWe() {
+function WhoAreWe({ whoarewe }) {
   return (
     <div>
       <div>
@@ -95,6 +102,7 @@ function WhoAreWe() {
           <span>Who Are We</span>
         </h3>
       </div>
+      <ul></ul>
       <div className="align-cards">
         <div className="card-container">
           <div id="carPic" className="card-display">
@@ -117,12 +125,19 @@ function WhoAreWe() {
   );
 }
 
-function PlanTravel() {
+function PlanTravel({ plan }) {
+  console.log(plan);
+
   return (
     <div>
       <h3>
         <span>Plan Travel</span>
       </h3>
+      <ul>
+        {plan.map((item) => (
+          <ObjAirItem item={item} key={item.airportCode} />
+        ))}
+      </ul>
       <div className="center-container">
         <div className="grid-container">
           <div>
